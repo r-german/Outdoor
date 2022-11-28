@@ -26,7 +26,7 @@
 }
 
 %model4{
-    padding: 50px 8px 59px 8px;
+    padding: 75px 8px 0px 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -162,21 +162,27 @@
         line-height: 14px;
     }
 }
-
+@media (max-width: 320px){
+    %model2{
+        margin: 0px auto;
+        max-width: 200px;
+        line-height: 23px;
+        margin-top: 1.5px;
+        margin-bottom: 3.5px;
+    }
+}
 
 %model-box{
     max-width: 570px;
     margin: 0px auto;
     text-align: center;
     padding: 0px 16px 0px 16px;
-    margin-top: 100px;
 }
 
 %model-store{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     flex: 1 1 31.555%; 
     padding: 39px 0px 305px 0px;
     margin: 0px 8px 16px 8px;
@@ -194,6 +200,7 @@
 }
 
 %store__text2{
+    text-align: center;
     margin: 10px 0px 20px 0px;
     line-height: 22px;
     color: rgba(87, 84, 69, 1);
@@ -243,34 +250,59 @@
     }
 }
 
-%store__link{
-    display: flex;
-    justify-content: space-between;
-}
-
 %link__text{
     font-size: 14px;
     line-height: 21px;
     color: rgba(87, 84, 69, 1);
     &:hover{color: rgb(255, 255, 255);}
+    background: url('Outdoor img/Outdoor\ img\ content/Path10.svg') 100% 50% no-repeat;
+}
+
+@media (max-width: 561px){
+    %link__text{
+        font-size: 12.6px;
+        line-height: 18.9px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path9.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 476px){
+    %link__text{
+        font-size: 11.2px;
+        line-height: 16.8px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path8.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 391px){
+    %link__text{
+        font-size: 9.8px;
+        line-height: 14.7px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path7.svg') 100% 50% no-repeat;
+    }
 }
 
 %social-networks__text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
     font-size: 12px;
-    line-height: 12px;
     color: white;
-    align-self: center;
     &:hover{color: rgba(230, 185, 57, 1);}
+}
+
+%footer-title{
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(230, 185, 57, 1);
 }
 
 %footer-links{
     font-size: 14px;
-    line-height: 20px;
     color: white;
 }
 
 %footer-minibox{
-    flex: 0 1 220.8px;
     height: 193px;
     display: flex;
     flex-direction: column;
@@ -291,15 +323,13 @@
     padding-right: 16px;
 }
 
-.header__row{
+.header__header-row{
+    padding: 20px 0px 19px 0px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.row__part1{
-    flex: 1 1 128px;
-    padding: 20px 16px 19px 0px;
-}
+.header-row__part1{flex: 1 1 128px;}
 
 .part1__flip{
     transform-style: preserve-3d;
@@ -316,6 +346,7 @@
 
 .flip__logo1{
     backface-visibility: hidden;
+    transform: rotateX(0deg);
     width: 128px;
     display: flex;
     justify-content: space-between;
@@ -344,8 +375,8 @@
     display: flex;
     align-items: center;
     .logo2__text{
-        margin-left: 5px;
         text-align: center;
+        margin-left: 5px;
     }
     .logo2__text1{
         text-transform: uppercase;
@@ -360,21 +391,12 @@
     }
 }
 
-.row__2nd-part{
-    flex: 0 1 788px;
-    display: flex;
-    justify-content: space-between;
-}
-
 nav{
     display: flex;
-    flex-wrap: wrap;
     flex: 0 1 460px;
-    align-items: center;
     justify-content: space-between;
     .nav__links{
         font-size: 13px;
-        line-height: 14px;
         color: rgba(68, 68, 68, 1);
         &:hover{
             color: rgba(230, 185, 57, 1);
@@ -382,35 +404,34 @@ nav{
     }
 }
 
-.buttons{
+.header-row__buttons{
+    flex: 0 1 354px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.button1{
-    margin: 8px 0px 8px 16px;
+.buttons__button1{
+    margin-right: 16px;
     .button1__buy-template{
-        padding: 13.5px 18px 13.5px 18px;
+        padding: 13.5px 18px;
         background-color: rgba(87, 84, 69, 1);
         border-radius: 6px;
         color: white;
         font-size: 16px;
         line-height: 22px;
-        &:hover{ background-color: rgb(57, 84, 69);}
+        &:hover{background-color: rgb(57, 84, 69);}
     }    
 }
 
-.button2{
-    margin: 8px 0px 8px 16px;
+.buttons__button2{
     .button2__cart{
         display: flex;
         align-items: center;
-        padding: 13.5px 18px 13.5px 18px;
+        padding: 13.5px 18px;
         background-color: rgba(87, 84, 69, 1);
         border-radius: 6px;
-        &:hover{ background-color: rgb(57, 84, 69);}
+        &:hover{background-color: rgb(57, 84, 69);}
         .cart__text{
             margin-left: 8px;
             margin-right: 8px;
@@ -430,6 +451,8 @@ nav{
         }
     }
 }
+@media(max-width: 1060px){nav{display: none;}}
+@media(max-width: 500px){.header-row__buttons{display: none};}
 
 .content{
     flex: 1 1 auto;
@@ -444,9 +467,9 @@ nav{
 
 .exploration{
     margin-top: 200px;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
+    font-size: 15.4px;
+    line-height: 22px;
+    letter-spacing: 2.2px;
     text-transform: uppercase;
     color: rgba(230, 185, 57, 0);
     animation: exploration-kf 2s ease-out 0.5s forwards;
@@ -458,13 +481,13 @@ nav{
 }
 
 h1{
-    margin-top: 11px;
-    margin-bottom: 16px;
+    margin-top: 12.1px;
+    margin-bottom: 17.6px;
     font-family: 'Roboto';
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 52.8px;
+    line-height: 63.8px;
     color: rgba(255, 255, 255, 0);
-    max-width: 416px;
+    max-width: 457.6px;
     animation: h1-kf 2s linear 1.5s forwards;
 }
 
@@ -474,11 +497,11 @@ h1{
 }
 
 .lorem1{
-    margin-bottom: 227px;
-    font-size: 17px;
-    line-height: 25px;
+    margin-bottom: 200px;
+    font-size: 18.7px;
+    line-height: 27.5px;
     color: rgba(202, 204, 209, 0);
-    max-width: 495px;
+    max-width: 544.5px;
     animation: lorem1-kf 2s linear 2.5s forwards;
 }
 
@@ -487,71 +510,148 @@ h1{
     100%{color: rgba(202, 204, 209, 1);}
 }
 
-@media (max-width: 561px){
+@media (max-width: 1200px){
     .exploration{
-        font-size: 13px;
-        margin-top: 170px;
+        margin-top: 180px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
     }
     h1{
-        font-size: 40px;
-        margin-top: 10px;
-        margin-bottom: 14px;
-        line-height: 50px;
+        margin-top: 11px;
+        margin-bottom: 16px;
+        font-size: 48px;
+        line-height: 58px;
+        max-width: 416px;
     }
     .lorem1{
-        font-size: 15px;
-        margin-bottom: 187px;
-        max-width: 340px;
-        line-height: 22px;
+        margin-bottom: 180px;
+        font-size: 17px;
+        line-height: 25px;
+        max-width: 495px;
+    }
+}
+@media (max-width: 992px){
+    .exploration{
+        margin-top: 160px;
+        font-size: 12.6px;
+        line-height: 18px;
+        letter-spacing: 1.8px;
+    }
+    h1{
+        margin-top: 9.9px;
+        margin-bottom: 14.4px;
+        font-size: 43.2px;
+        line-height: 52.2px;
+        max-width: 374.4px;
+    }
+    .lorem1{
+        margin-bottom: 160px;
+        font-size: 15.3px;
+        line-height: 22.5px;
+        max-width: 445.5px;
     }
 }
 
-@media (max-width: 476px){
+@media (max-width: 767px){
     .exploration{
-        font-size: 12px;
         margin-top: 140px;
+        font-size: 11.2px;
+        line-height: 16px;
+        letter-spacing: 1.6px;
     }
     h1{
-        font-size: 32px;
-        margin-top: 9px;
-        margin-bottom: 12px;
-        max-width: 320px;
-        line-height: 42px;
+        margin-top: 8.8px;
+        margin-bottom: 12.8px;
+        font-size: 38.4px;
+        line-height: 46.4px;
+        max-width: 332.8px;
     }
     .lorem1{
-        font-size: 13px;
-        margin-bottom: 157px;
-        max-width: 395px;
-        line-height: 19px;
+        margin-bottom: 140px;
+        font-size: 13.6px;
+        line-height: 20px;
+        max-width: 396px;
     }
 }
 
-@media (max-width: 391px){
+@media (max-width: 666px){
     .exploration{
-        font-size: 11px;
-        margin-top: 110px;
+        margin-top: 120px;
+        font-size: 9.8px;
+        line-height: 14px;
+        letter-spacing: 1.4px;
     }
     h1{
-        font-size: 24px;
-        margin-top: 8px;
-        margin-bottom: 10px;
-        line-height: 34px;
-        max-width: 240px;
+        margin-top: 7.7px;
+        margin-bottom: 11.2px;
+        font-size: 33.6px;
+        line-height: 40.6px;
+        max-width: 291.2px;
     }
     .lorem1{
-        font-size: 11px;
-        margin-bottom: 127px;
-        line-height: 16px;
-        max-width: 230px;
+        margin-bottom: 120px;
+        font-size: 11.9px;
+        line-height: 17.5px;
+        max-width: 346.5px;
     }
+}
+@media (max-width: 600px){
+    .exploration{
+        margin-top: 100px;
+        font-size: 11.2px;
+        line-height: 16px;
+        letter-spacing: 1.6px;
+    }
+    h1{
+        margin-top: 8.8px;
+        margin-bottom: 12.8px;
+        font-size: 38.4px;
+        line-height: 46.4px;
+        max-width: 332.8px;
+    }
+    .lorem1{
+        margin-bottom: 100px;
+        font-size: 13.6px;
+        line-height: 20px;
+        max-width: 396px;
+    }
+    .box1{background: url('Outdoor img/Outdoor\ img\ content/IMAGE.jpg') 41% 50% no-repeat;}
+}
+@media (max-width: 476px){
+    .box1{background: url('Outdoor img/Outdoor\ img\ content/IMAGE.jpg') 48% 50% no-repeat;}
+    .exploration{
+        margin-top: 75px;
+        font-size: 9.8px;
+        line-height: 14px;
+        letter-spacing: 1.4px;
+    }
+    h1{
+        margin-top: 6.6px;
+        margin-bottom: 9.8px;
+        font-size: 28.8px;
+        line-height: 34.8px;
+        max-width: 249.6px;
+    }
+    .lorem1{
+        margin-bottom: 75px;
+        font-size: 10.2px;
+        line-height: 15px;
+        max-width: 297px;
+    }
+}
+@media (max-width: 380px){
+    .box1{background: url('Outdoor img/Outdoor\ img\ content/IMAGE.jpg') 47% 50% no-repeat;}
+    .exploration{margin-top: 50px;}
+    .lorem1{margin-bottom: 50px;}
 }
 
 .box2{
     border: 1px solid rgb(0, 0, 0, 0);
     max-width: 1440px;
     margin: 0px auto;
-    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape.png') 8px 113% no-repeat, 
-                url('Outdoor img/Outdoor\ img\ content/Combined-Shape.png') right -30px no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape.svg') left 113% no-repeat, 
+                url('Outdoor img/Outdoor\ img\ content/Combined-Shape.svg') right -30px no-repeat;
 }
 
 .box2-row{
@@ -573,41 +673,102 @@ h1{
     .info__a-bit{@extend %model2;}
     .info__we-are{@extend %model3;}
     .info__read{
+        display: block;
         width: 108px;
         margin-top: 20px;
         font-size: 15px;
-        line-height: 21px;
         color: rgba(87, 84, 69, 1);
-        background: url('Outdoor img/Outdoor\ img\ content/Path.svg') 89px 5.5px no-repeat;
+        background: url('Outdoor img/Outdoor\ img\ content/Path10.svg') 100% 50% no-repeat;
         &:hover{color: rgba(230, 185, 57, 1);}
     }
 }
-
-@media(max-width: 666px){
+@media(max-width: 850px){
     .box2{
-        background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape.png') 8px -30px no-repeat, 
-                    url('Outdoor img/Outdoor\ img\ content/Combined-Shape.png') right 120.385% no-repeat;
+        background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape-middle.svg') left 113% no-repeat, 
+                    url('Outdoor img/Outdoor\ img\ content/Combined-Shape-middle.svg') right -30px no-repeat;
     }
+}
+@media(max-width: 666px){
+    .box2{background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape-middle.svg') right -30px no-repeat;}
     .box2-row{
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 48px;
-        margin-bottom: 48px;
+        margin: 46px -17px -2px -17px;
         .box2-row__img{
+            order: 2;
+            position: relative;
             flex: 0 1 100%;
             display: flex;
             justify-content: center;
             margin-right: 0px;
-            .img__pic1{width: 45%;}
+            padding: 0px 0px 40% 0px;
+            border-top: 2px solid rgb(113, 124, 223, 0.5);
+            border-bottom: 2px solid rgb(113, 124, 223, 0.5);
+            .img__pic1{
+                object-fit: cover;
+                object-position: 0% 40%;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                height: 100%;
+                width: 100%;
+            }
         }
         .box2-row__info{
+            width: 100%;
+            padding: 0px 17px;
+            order: 1;
             margin-left: 0px;
-            margin-top: 16px;
             text-align: center;
             .info__read{
                 margin: 0px auto;
-                margin-top: 20px;
+                margin-top: 16px;
+                margin-bottom: 49px;
                 text-align: left;
+            }
+        }
+    }
+}
+@media (max-width: 561px){
+    .box2{background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape-small.svg') right -30px no-repeat;}
+    .box2-row{
+        margin-top: 36px;
+        .box2-row__info{
+            .info__read{
+                width: 97.2px;
+                margin: 0px auto;
+                margin-top: 15px;
+                margin-bottom: 39px;
+                font-size: 13.5px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path9.svg') 100% 50% no-repeat;
+            }
+        }
+    }
+}
+@media (max-width: 476px){
+    .box2-row{
+        margin-top: 31px;
+        .box2-row__info{
+            .info__read{
+                width: 86.4px;
+                margin-top: 14px;
+                margin-bottom: 34px;
+                font-size: 12px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path8.svg') 100% 50% no-repeat;
+            }
+        }
+    }
+}
+@media (max-width: 391px){
+    .box2-row{
+        margin-top: 26px;
+        .box2-row__info{
+            .info__read{
+                width: 75.6px;
+                margin-top: 13px;
+                margin-bottom: 29px;
+                font-size: 10.5px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path7.svg') 100% 50% no-repeat;
             }
         }
     }
@@ -618,11 +779,12 @@ h1{
     max-width: 1440px;
     margin: 0px auto;
     background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape2.svg') 969.6px 0px no-repeat,
-                url('Outdoor img/Outdoor\ img\ content/Combined-Shape3.png') bottom left no-repeat,
+                url('Outdoor img/Outdoor\ img\ content/Combined-Shape3.svg') bottom left no-repeat,
                 rgba(250, 250, 252, 1);
 }
 
 .our-promise{
+    margin-top: 100px;
     @extend %model-box;
     .our-promise__text1{@extend %model1;}
     .our-promise__text2{@extend %model2;}
@@ -632,8 +794,7 @@ h1{
 .advantages{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 21px;
-    margin-bottom: 50px;
+    margin-bottom: 98px;
 }
 
 .advantages__sustainable-sourcing{
@@ -681,19 +842,19 @@ h1{
 @media(max-width: 666px){
     %model4{
         flex: 1 1 50%;
-        padding: 25px 8px 29.5px 8px;
+        padding: 50px 8px 0px 8px;
     }
     .our-promise{margin-top: 75px;}
-    .advantages{margin-bottom: 45.5px;}
+    .advantages{margin-bottom: 73px;}
 }
 
 @media(max-width: 456px){
     %model4{
         flex: 1 1 100%;
-        padding: 15px 8px 19.5px 8px;
+        padding: 25px 8px 0px 8px;
     }
     .our-promise{margin-top: 50px;}
-    .advantages{margin-bottom: 30.5px;}
+    .advantages{margin-bottom: 48px;}
 }
 
 .box4{
@@ -728,25 +889,35 @@ h1{
 
 .store__accessories{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img1.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img1.jpg') center/cover no-repeat;
     .accessories__text1{@extend %store__text1;}
     .accessories__text2{@extend %store__text2;}
     .accessories__link1{
-        @extend %store__link;
-        width: 145px;
-        .link1__text{@extend %link__text;}
+        .link1__text{
+            width: 145px;
+            @extend %link__text;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .store__accessories{
+        background: url('Outdoor img/Outdoor\ img\ content/img1.jpg') 50% 30% / cover no-repeat;
+    }
+}
+@media (max-width: 700px){
+    .store__accessories{
+        background: url('Outdoor img/Outdoor\ img\ content/img1.jpg') 50% 27% / cover no-repeat;
     }
 }
 
 .store__apparel{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img2.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img2.jpg') center/cover no-repeat;
     .apparel__text1{@extend %store__text1;}
     .apparel__text2{@extend %store__text2;}
     .apparel__link2{
-        @extend %store__link;
-        width: 117px;
         .link2__text{
+            width: 117px;
             @extend %link__text;
             &:hover{color: rgba(230, 185, 57, 1);}
         }
@@ -755,49 +926,51 @@ h1{
 
 .store__climbing-gear{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img3.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img3.jpg') center/cover no-repeat;
     .climbing-gear__text1{@extend %store__text1;}
     .climbing-gear__text2{@extend %store__text2;}
     .climbing-gear__link3{
-        @extend %store__link;
-        width: 163px;
-        .link3__text{@extend %link__text;}
+        .link3__text{
+            width: 163px;
+            @extend %link__text;
+        }
     }
 }
 
 .store__headwear{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img4.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img4.jpg') center/cover no-repeat;
     .headwear__text1{@extend %store__text1;}
     .headwear__text2{@extend %store__text2;}
     .headwear__link4{
-        @extend %store__link;
-        width: 133.2px;
-        .link4__text{@extend %link__text;}
+        .link4__text{
+            width: 133.2px;
+            @extend %link__text;
+        }
     }
 }
 
 .store__hiking-gear{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img5.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img5.jpg') center/cover no-repeat;
     .hiking-gear__text1{@extend %store__text1;}
     .hiking-gear__text2{@extend %store__text2;}
     .hiking-gear__link5{
-        @extend %store__link;
-        width: 142px;
-        .link5__text{@extend %link__text;}
+        .link5__text{
+            width: 142px;
+            @extend %link__text;
+        }
     }
 }
 
 .store__jackets{
     @extend %model-store;
-    background: url('Outdoor img/Outdoor\ img\ content/img6.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/img6.jpg') center/cover no-repeat;
     .jackets__text1{@extend %store__text1;}
     .jackets__text2{@extend %store__text2;}
     .jackets__link6{
-        @extend %store__link;
-        width: 115.4px;
         .link6__text{
+            width: 115.4px;
             @extend %link__text;
             &:hover{color: rgba(230, 185, 57, 1);}
         }
@@ -805,26 +978,73 @@ h1{
 }
 
 .show{
-    display: flex;
-    justify-content: space-between;
-    width: 171px;
     margin: 0px auto;
+    display: block;
     margin-bottom: 100px;
-    .show__text{
-        font-size: 15px;
-        line-height: 21px;
-        color: rgba(87, 84, 69, 1);
-        &:hover{color: rgba(230, 185, 57, 1);}
+    width: 171px;
+    font-size: 15px;
+    color: rgba(87, 84, 69, 1);
+    background: url('Outdoor img/Outdoor\ img\ content/Path10.svg') 100% 50% no-repeat;
+    &:hover{color: rgba(230, 185, 57, 1);}
+}
+
+@media (max-width: 561px){
+    .store__accessories{.accessories__link1{.link1__text{width: 130.5px;}}}
+    .store__apparel{.apparel__link2{.link2__text{width: 105.3px;}}}
+    .store__climbing-gear{.climbing-gear__link3{.link3__text{width: 146.7px;}}}
+    .store__headwear{.headwear__link4{.link4__text{width: 119.88px;}}}
+    .store__hiking-gear{.hiking-gear__link5{.link5__text{width: 127.8px;}}}
+    .store__jackets{.jackets__link6{.link6__text{width: 103.86px;}}}
+    .show{
+        width: 153.9px;
+        font-size: 13.5px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path9.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 476px){
+    .store__accessories{.accessories__link1{.link1__text{width: 116px;}}}
+    .store__apparel{.apparel__link2{.link2__text{width: 93.6px;}}}
+    .store__climbing-gear{.climbing-gear__link3{.link3__text{width: 130.4px;}}}
+    .store__headwear{.headwear__link4{.link4__text{width: 106.56px;}}}
+    .store__hiking-gear{.hiking-gear__link5{.link5__text{width: 113.6px;}}}
+    .store__jackets{.jackets__link6{.link6__text{width: 92.32px;}}}
+    .show{
+        width: 136.8px;
+        font-size: 12px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path8.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 391px){
+    .store__accessories{.accessories__link1{.link1__text{width: 101.5px;}}}
+    .store__apparel{.apparel__link2{.link2__text{width: 81.9px;}}}
+    .store__climbing-gear{.climbing-gear__link3{.link3__text{width: 114.1px;}}}
+    .store__headwear{.headwear__link4{.link4__text{width: 93.24px;}}}
+    .store__hiking-gear{.hiking-gear__link5{.link5__text{width: 99.4px;}}}
+    .store__jackets{.jackets__link6{.link6__text{width: 80.78px;}}}
+    .show{
+        width: 119.7px;
+        font-size: 10.5px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path7.svg') 100% 50% no-repeat;
     }
 }
 
-@media(max-width: 666px){.show{margin-bottom: 75px;}}
-@media(max-width: 456px){.show{margin-bottom: 50px;}}
+@media(max-width: 666px){
+    .show{
+        margin-top: -2px;
+        margin-bottom: 75px;
+    }
+}
+@media(max-width: 456px){
+    .show{
+        margin-top: -4px;
+        margin-bottom: 50px;
+    }
+}
 
 .box5{
     max-width: 1440px;
     margin: 0px auto;
-    background: url('Outdoor img/Outdoor\ img\ content/ocean.png') center/cover no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/ocean.jpg') center/cover no-repeat;
 }
 
 .container3{
@@ -850,6 +1070,7 @@ h1{
     .box5__social-networks{
         margin: 384px 0px 40px 0px;
     }
+    .container3{justify-content: center;}
 }
 @media(max-width: 561px){
     .box5__social-networks{
@@ -865,48 +1086,36 @@ h1{
 }
 
 .social-networks__kit{
-    display: flex;
-    justify-content: space-between;
     width: 88px;
-    margin-top: 16px;
-    .kit__text{@extend %social-networks__text;}
+    @extend %social-networks__text;
 }
 
 .social-networks__brian{
-    display: flex;
-    justify-content: space-between;
     width: 101px;
-    margin-top: 16px;
-    .brian__text{@extend %social-networks__text;}
+    @extend %social-networks__text;
 }
 
 .social-networks__leah{
-    display: flex;
-    justify-content: space-between;
     width:  82px;
-    margin-top: 16px;
-    .leah__text{@extend %social-networks__text;}
+    @extend %social-networks__text;
 }
 
 .social-networks__catalina{
-    display: flex;
-    justify-content: space-between;
     width: 138px;
-    margin-top: 16px;
-    .catalina__text{@extend %social-networks__text;}
+    @extend %social-networks__text;
 }
 
 .box6{
     border: 1px solid rgba(55, 92, 88, 1);
     max-width: 1440px;
     margin: 0px auto;
-    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape4.png') center/cover no-repeat, 
+    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape4.svg') center/cover no-repeat, 
                 rgba(55, 92, 88, 1);
 }
 
 .box6__minibox{
     @extend %model-box;
-    margin-top: 99px;
+    margin-top: 96px;
     .minibox__shop{
         @extend %model1;
         color: rgba(250, 250, 252, 1);
@@ -921,28 +1130,53 @@ h1{
     }
 }
 
-@media (max-width: 561px){.box6__minibox{margin-top: 74px;}}
-@media (max-width: 476px){.box6__minibox{margin-top: 49px;}}
+@media (max-width: 561px){.box6__minibox{margin-top: 71px;}}
+@media (max-width: 476px){.box6__minibox{margin-top: 46px;}}
 
 .box6__link{
-    max-width: 111px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 111px;
+    height: 43px;
     margin: 0px auto;
     background: rgba(255, 255, 255, 1);
     border-radius: 6px;
     margin-top: 21px;
     margin-bottom: 99px;
-    padding: 10.5px 0px 10.5px 0px;
-    text-align: center;
-    .visit-shop{
-        color: rgba(87, 84, 69, 1);
-        font-size: 15px;
-        line-height: 22px;
-        &:hover{color: rgba(230, 185, 57, 1);}
-    }
+    color: rgba(87, 84, 69, 1);
+    font-size: 15px;
+    &:hover{color: rgba(230, 185, 57, 1);}
 }
 
-@media (max-width: 561px){.box6__link{margin-bottom: 74px;}}
-@media (max-width: 476px){.box6__link{margin-bottom: 49px;}}
+@media (max-width: 561px){
+    .box6__link{
+        width: 99.9px;
+        height: 38.7px;
+        margin-top: 18.9px;
+        margin-bottom: 74px;
+        font-size: 13.5px;
+    }
+}
+@media (max-width: 476px){
+    .box6__link{
+        width: 88.8px;
+        height: 34.4px;
+        margin-top: 16.8px;
+        margin-bottom: 49px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 391px){
+    .box6__minibox{margin-top: 36px;}
+    .box6__link{
+        width: 77.7px;
+        height: 30.1px;
+        margin-top: 14.7px;
+        margin-bottom: 39px;
+        font-size: 10.5px;
+    }
+}
 
 .box7{
     max-width: 1440px;
@@ -951,7 +1185,7 @@ h1{
 
 .box7__bg{
     max-width: 538px;
-    margin: 100px 8px 0px 8px;
+    margin: 97px 8px 0px 8px;
     .bg__text1{@extend %model1;}
     .bg__text2{@extend %model2;}
     .bg__text3{@extend %model3;}
@@ -968,7 +1202,7 @@ h1{
     .box7__bg{
         max-width: 100%;
         margin: 0px auto;
-        margin: 75px 8px 0px 8px;
+        margin: 72px 8px 0px 8px;
         text-align: center;
     }
     .box7__extreme{
@@ -985,6 +1219,7 @@ h1{
             }
         }
         .extreme__second{
+            margin: 23px 8px 0px 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -996,14 +1231,12 @@ h1{
         }
     }
 }
-@media(max-width: 476px){.box7__bg{margin: 50px 8px 0px 8px;}}
 
 .first__img{width: 100%;}
 
 .first__comment1{
     position: relative;
-    margin-top: 18px;
-    margin-bottom: 12.14px;
+    margin: 18px 0px;
     max-width: 465px;
     min-height: 50px;
     color: rgba(87, 84, 69, 1);
@@ -1019,16 +1252,13 @@ h1{
 
 .first__author1{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     .autor1__photo-name1{
         display: flex;
         align-items: center;
-        .photo-name1__photo{max-width: 100%;}
         .photo-name1__name1{
             margin-left: 12px;
-            margin-right: 12px;
             .name1__alex{
                 font-family: 'Roboto';
                 font-size: 13px;
@@ -1043,10 +1273,7 @@ h1{
         }
     }
     .author1__date1{
-        margin-top: 5px;
-        margin-bottom: 5px;
         font-size: 13px;
-        line-height: 18px;
         color: rgba(111, 114, 120, 1);
     }
 }
@@ -1055,8 +1282,7 @@ h1{
 
 .second__comment2{
     position: relative;
-    margin-top: 18px;
-    margin-bottom: 12.14px;
+    margin: 18px 0px;
     max-width: 465px;
     min-height: 50px;
     color: rgba(87, 84, 69, 1);
@@ -1070,33 +1296,15 @@ h1{
     }
 }
 
-@media(max-width: 561px){
-    .first__comment1{font-size: 17px;}
-    .second__comment2{font-size: 17px;}
-}
-
-@media(max-width: 476px){
-    .first__comment1{font-size: 14px;}
-    .second__comment2{font-size: 14px;}
-}
-
-@media(max-width: 391px){
-    .first__comment1{font-size: 11px;}
-    .second__comment2{font-size: 11px;}
-}
-
 .second__author2{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     .autor2__photo-name2{
         display: flex;
         align-items: center;
-        .photo-name2__photo{max-width: 100%;}
         .photo-name2__name2{
             margin-left: 12px;
-            margin-right: 12px;
             .name2__woodie{
                 font-family: 'Roboto';
                 font-size: 13px;
@@ -1111,27 +1319,152 @@ h1{
         }
     }
     .author2__date2{
-        margin-top: 5px;
-        margin-bottom: 5px;
         font-size: 13px;
-        line-height: 18px;
         color: rgba(111, 114, 120, 1);
     }
 }
 
 
+@media(max-width: 561px){
+    .box7__extreme{
+        .extreme__first{margin: 18px 8px 0px 8px;}
+        .extreme__second{margin: 21px 8px 0px 8px;}
+    }
+    .first__comment1, .second__comment2{
+        margin: 16.2px 0px;
+        font-size: 17px;
+        line-height: 20.4px;
+    }
+    .first__author1{.author1__date1{font-size: 11.7px;}}
+    .second__author2{.author2__date2{font-size: 11.7px;}}
+}
+
+@media(max-width: 476px){
+    .box7__bg{margin: 47px 8px 0px 8px;}
+    .box7__extreme{
+        .extreme__first{margin: 16px 8px 0px 8px;}
+        .extreme__second{margin: 19px 8px 0px 8px;}
+    }
+    .first__comment1, .second__comment2{
+        margin: 14.4px 0px;
+        font-size: 14px;
+        line-height: 16.8px;
+    }
+    .first__author1{
+        .autor1__photo-name1{
+            .photo-name1__photo{width: 45px;}
+            .photo-name1__name1{
+                margin-left: 10.8px;
+                .name1__alex{
+                    font-size: 11.7px;
+                    line-height: 16.2px;
+                }
+                .name1__qa{
+                    font-size: 9.9px;
+                    line-height: 13.5px;
+                }
+            }
+        }
+        .author1__date1{font-size: 10.4px;}
+    }
+    .second__author2{
+        .autor2__photo-name2{
+            .photo-name2__photo{width: 45px;}
+            .photo-name2__name2{
+                margin-left: 10.8px;
+                .name2__woodie{
+                    font-size: 11.7px;
+                    line-height: 16.2px;
+                }
+                .name2__pd{
+                    font-size: 9.9px;
+                    line-height: 13.5px;
+                }
+            }
+        }
+        .author2__date2{font-size: 10.4px;}
+    }
+}
+
+@media(max-width: 391px){
+    .box7__bg{margin: 37px 8px 0px 8px;}
+    .box7__extreme{
+        .extreme__first{margin: 14px 8px 0px 8px;}
+        .extreme__second{margin: 17px 8px 0px 8px;}
+    }
+    .first__comment1, .second__comment2{
+        margin: 12.6px 0px;
+        font-size: 11px;
+        line-height: 13.2px;
+    }
+    .first__author1{
+        .autor1__photo-name1{
+            .photo-name1__photo{width: 40px;}
+            .photo-name1__name1{
+                margin-left: 9.6px;
+                .name1__alex{
+                    font-size: 10.4px;
+                    line-height: 14.4px;
+                }
+                .name1__qa{
+                    font-size: 8.8px;
+                    line-height: 12px;
+                }
+            }
+        }
+        .author1__date1{font-size: 9.1px;}
+    }
+    .second__author2{
+        .autor2__photo-name2{
+            .photo-name2__photo{width: 40px;}
+            .photo-name2__name2{
+                margin-left: 9.6px;
+                .name2__woodie{
+                    font-size: 10.4px;
+                    line-height: 14.4px;
+                }
+                .name2__pd{
+                    font-size: 8.8px;
+                    line-height: 12px;
+                }
+            }
+        }
+        .author2__date2{font-size: 9.1px;}
+    }
+}
+
 .box7__show-all-bg{
     width: 201px;
     margin: 0px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     margin-top: 26px;
-    .show-all-bg__text{
-        color: rgba(87, 84, 69, 1);
-        font-size: 15px;
-        line-height: 21px;
-        &:hover{color: rgba(230, 185, 57, 1);}
+    color: rgba(87, 84, 69, 1);
+    font-size: 15px;
+    background: url('Outdoor img/Outdoor\ img\ content/Path10.svg') 100% 50% no-repeat;
+    &:hover{color: rgba(230, 185, 57, 1);}
+}
+@media (max-width: 561px){
+    .box7__show-all-bg{
+        margin-top: 23.4px;
+        width: 180.9px;
+        font-size: 13.5px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path9.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 476px){
+    .box7__show-all-bg{
+        margin-top: 20.8px;
+        width: 160.8px;
+        font-size: 12px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path8.svg') 100% 50% no-repeat;
+    }
+}
+@media (max-width: 391px){
+    .box7__show-all-bg{
+        margin-top: 18.2px;
+        width: 140.7px;
+        font-size: 10.5px;
+        background: url('Outdoor img/Outdoor\ img\ content/Path7.svg') 100% 50% no-repeat;
     }
 }
 
@@ -1139,8 +1472,8 @@ h1{
     border: 1px solid rgb(0, 0, 0, 0);
     max-width: 1440px;
     margin: 0px auto;
-    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape5.png') 49.444% 11.609% no-repeat,
-                url('Outdoor img/Outdoor\ img\ content/Combined-Shape6.png') 8px 104.523% no-repeat;
+    background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape.svg') top right no-repeat,
+                url('Outdoor img/Outdoor\ img\ content/Combined-Shape.svg') left 104.523% no-repeat;
 }
 
 .box8__magazine{
@@ -1160,34 +1493,30 @@ h1{
         .subscribe__text3{@extend %model3;}
         .subscribe__read-box8{
             margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: block;
             width: 108px;
-            .read-box8__text{
-                color: rgba(87, 84, 69, 1);
-                font-size: 15px;
-                line-height: 21px;
-                &:hover{color: rgba(230, 185, 57, 1);}
-            }
+            color: rgba(87, 84, 69, 1);
+            font-size: 15px;
+            background: url('Outdoor img/Outdoor\ img\ content/Path10.svg') 100% 50% no-repeat;
+            &:hover{color: rgba(230, 185, 57, 1);}
         }
     }
 }
 
 @media(max-width: 850px){
     .box8{
-        background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape5.png') top right no-repeat,
-                    url('Outdoor img/Outdoor\ img\ content/Combined-Shape6.png') 8px 104.523% no-repeat;
+        background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape-middle.svg') top right no-repeat,
+                    url('Outdoor img/Outdoor\ img\ content/Combined-Shape-middle.svg') left 104.523% no-repeat;
     }
     .box8__magazine{
         margin-top: 74px;
         margin-bottom: 74px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         .magazine__mag-box1{
             position: relative;
-            flex: 0 1 400px;
-            height: 250px;
+            flex: 0 1 250px;
+            width: 400px;
             .mag-box1__img{
                 position: absolute;
                 top: 0px;
@@ -1204,7 +1533,7 @@ h1{
             text-align: center;
             max-width: 400px;
             .subscribe__read-box8{
-                width: 108px;
+                text-align: left;
                 margin: 0px auto;
                 margin-top: 20px;
             }
@@ -1212,15 +1541,26 @@ h1{
     }
 }
 @media(max-width: 561px){
+    .box8{
+        background: url('Outdoor img/Outdoor\ img\ content/Combined-Shape-small.svg') top right no-repeat,
+                    url('Outdoor img/Outdoor\ img\ content/Combined-Shape-small.svg') left 104.523% no-repeat;
+    }
     .box8__magazine{
         margin-top: 64px;
         margin-bottom: 64px;
         .magazine__mag-box1{
-            position: relative;
-            flex: 0 1 350px;
-            height: 220px;
+            width: 350px;
+            flex: 0 1 220px;
         }            
-        .magazine__subscribe{max-width: 350px;}
+        .magazine__subscribe{
+            max-width: 350px;
+            .subscribe__read-box8{
+                margin-top: 18px;
+                width: 97.2px;
+                font-size: 13.5px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path9.svg') 100% 50% no-repeat;
+            }
+        }
     }
 }
 @media(max-width: 476px){
@@ -1228,11 +1568,40 @@ h1{
         margin-top: 49px;
         margin-bottom: 49px;
         .magazine__mag-box1{
-            position: relative;
-            flex: 0 1 280px;
-            height: 180px;
+            width: 280px;
+            flex: 0 1 180px;
         }      
-        .magazine__subscribe{max-width: 280px;}
+        .magazine__subscribe{
+            max-width: 280px;
+            .subscribe__read-box8{
+                margin-top: 16px;
+                width: 86.4px;
+                font-size: 12px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path8.svg') 100% 50% no-repeat;
+            }
+        }
+    }
+}
+@media(max-width: 391px){
+    .box8__magazine{   
+        .magazine__subscribe{
+            .subscribe__read-box8{
+                margin-top: 14px;
+                width: 75.6px;
+                font-size: 10.5px;
+                background: url('Outdoor img/Outdoor\ img\ content/Path7.svg') 100% 50% no-repeat;
+            }
+        }
+    }
+}
+
+@media(max-width: 330px){
+    .box8__magazine{
+        .magazine__mag-box1{
+            width: 100%;
+            flex: 0 1 0px;
+            padding: 0px 0px 65% 0px;
+        }      
     }
 }
 
@@ -1246,20 +1615,20 @@ h1{
 .box9__img{
     width: 164px;
     margin: 0px auto;
-    margin-top: 99px;
-    margin-bottom: 51px;
+    margin-top: 74px;
+    margin-bottom: 50px;
 }
 
-@media(max-width: 992px){
-    .box9__img{
-        margin-top: 74px;
-        margin-bottom: 26px;
-    }
-}
-@media(max-width: 767px){
+@media(max-width: 1200px){
     .box9__img{
         margin-top: 49px;
-        margin-bottom: 8px;
+        margin-bottom: 25px;
+    }
+}
+@media(max-width: 992px){
+    .box9__img{
+        margin-top: 31px;
+        margin-bottom: 7px;
     }
 }
 
@@ -1269,50 +1638,117 @@ h1{
     flex-wrap: wrap;
     .footer-row__pages{
         flex: 0 1 100px;
-        margin: 24px 16px 8px 16px;
+        margin: 24px 0px 8px 0px;
         @extend %footer-minibox;
-        .pages__title{@extend %model1;}
-        .pages__home{@extend %footer-links;}
-        .pages__shop{@extend %footer-links;}
-        .pages__categories{@extend %footer-links;}
-        .pages__bg{@extend %footer-links;}
-        .pages__404{@extend %footer-links;}
-        .pages__password{@extend %footer-links;}
+        .pages__title{@extend %footer-title;}
+        .pages__home{
+            @extend %footer-links;
+            width: 43px;
+        }
+        .pages__shop{
+            @extend %footer-links;
+            width: 37px;
+        }
+        .pages__categories{
+            @extend %footer-links;
+            width: 82px;
+        }
+        .pages__bg{
+            @extend %footer-links;
+            width: 100px;
+        }
+        .pages__404{
+            @extend %footer-links;
+            width: 29px;
+        }
+        .pages__password{
+            @extend %footer-links;
+            width: 72px;
+        }
     }
     .footer-row__gear-categories{
-        flex: 0 1 154px;
-        margin: 24px 16px 8px 16px;
+        flex: 0 1 155px;
+        margin: 24px 0px 8px 0px;
         @extend %footer-minibox;
-        .gear-categories__title{@extend %model1;}
-        .gear-categories__hiking-gear{@extend %footer-links;}
-        .gear-categories__climbing-gear{@extend %footer-links;}
-        .gear-categories__jackets{@extend %footer-links;}
-        .gear-categories__accessories{@extend %footer-links;}
-        .gear-categories__apparel{@extend %footer-links;}
-        .gear-categories__headwear{@extend %footer-links;}
+        .gear-categories__title{@extend %footer-title;}
+        .gear-categories__hiking-gear{
+            @extend %footer-links;
+            width: 84px;
+        }
+        .gear-categories__climbing-gear{
+            @extend %footer-links;
+            width: 105px;
+        }
+        .gear-categories__jackets{
+            @extend %footer-links;
+            width: 58px;
+        }
+        .gear-categories__accessories{
+            @extend %footer-links;
+            width: 89px;
+        }
+        .gear-categories__apparel{
+            @extend %footer-links;
+            width: 59px;
+        }
+        .gear-categories__headwear{
+            @extend %footer-links;
+            width: 76px;
+        }
     }
     .footer-row__company{
         flex: 0 1 137px;
-        margin: 24px 16px 8px 16px;
+        margin: 24px 0px 8px 0px;
         @extend %footer-minibox;
-        .company__title{@extend %model1;}
-        .company__about-us{@extend %footer-links;}
-        .company__our-team{@extend %footer-links;}
-        .company__contact{@extend %footer-links;}
-        .company__terms{@extend %footer-links;}
-        .company__style-guide{@extend %footer-links;}
-        .company__licenses{@extend %footer-links;}
+        .company__title{@extend %footer-title;}
+        .company__about-us{
+            @extend %footer-links;
+            width: 66px;
+        }
+        .company__our-team{
+            @extend %footer-links;
+            width: 70px;
+        }
+        .company__contact{
+            @extend %footer-links;
+            width: 61px;
+        }
+        .company__terms{
+            @extend %footer-links;
+            width: 137px;
+        }
+        .company__style-guide{
+            @extend %footer-links;
+            width: 80px;
+        }
+        .company__licenses{
+            @extend %footer-links;
+            width: 61px;
+        }
     }
     .footer-row__newsletter{
         flex: 0 1 458px;
-        margin: 24px 16px 8px 16px;
-        .newsletter__title{@extend %model1;}
+        margin: 24px 0px 8px 0px;
+        .newsletter__title{@extend %footer-title;}
         .newsletter__text{
-            max-width: 438px;
-            margin-bottom: 16px;
+            margin: 10px 0px 14px 0px;
             font-size: 14px;
             line-height: 20px;
             color: rgba(250, 250, 252, 1);
+        }
+        @media(max-width: 767px){
+            .newsletter__text{
+                font-size: 12.6px;
+                line-height: 18px;
+                margin: 9px 0px 13px 0px;
+            }
+        }
+        @media(max-width: 493px){
+            .newsletter__text{
+                font-size: 11.2px;
+                line-height: 16px;
+                margin: 8px 0px 12px 0px;
+            }
         }
         .newsletter__email{
             border-radius: 8px;
@@ -1322,8 +1758,8 @@ h1{
             justify-content: space-between;
             padding: 7px;
             .email__input{
-                flex: 0 1 364px;
-                padding: 9px 14px 9px 14px;
+                width: 100%;
+                padding: 9px 14px;
                 border-radius: 8px;
                 background: #F9FAFB;
                 &:focus{background: rgba(132, 159, 187, 0.4);}
@@ -1331,22 +1767,14 @@ h1{
             .email__email-button{
                 border-radius: 10px;
                 background: rgba(87, 84, 69, 1);
-                margin-left: 7px;
                 min-width: 73px;
+                margin-left: 7px;
+                &:hover{background-color: rgb(57, 84, 69);}
                 .email-button__submit{
-                    @extend %footer-links;
-                    margin: 9.5px 11.5px 9.5px 11.5px;
-                }
-            }
-            @media(max-width: 350px){
-                .email__input{
-                    padding: 9px 0px 9px 7px;
-                }
-                .email__email-button{
-                    min-width: 60px;
-                    .email-button__submit{
-                        margin: 9.5px 5px 9.5px 5px;
-                    }
+                    font-size: 14px;
+                    line-height: 1;
+                    color: white;
+                    margin: 12.5px 0px;
                 }
             }
         }
@@ -1356,64 +1784,120 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 16px 99px 16px;
-    .footer-row2__text{
-        @extend %footer-links;
-        margin-right: 32px;
+    margin: 63px 0px 74px 0px;
+    .footer-row2__copyright{
+       font-size: 14px;
+       line-height: 20px;
+       color: white;
+        .copyright__email{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    @media(max-width: 767px){
+        .footer-row2__copyright{
+            font-size: 12.6px;
+            line-height: 18px;
+        }
+    }
+    @media(max-width: 493px){
+        .footer-row2__copyright{
+            font-size: 11.2px;
+            line-height: 16px;
+        }
     }
     .footer-row2__footer-social-networks{
-        flex: 0 0 156px;
+        flex: 0 0 168px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 }
-@media(max-width: 992px){
-    .box9__footer-row2{margin: 32px 16px 74px 16px;}
+@media(max-width: 1200px){
+    .box9__footer-row{
+        .footer-row__newsletter{
+            flex: 0 1 100%;
+            .newsletter__text, .newsletter__email{width: 434px;}
+        }
+    }
+    .box9__footer-row2{margin: 39px 0px 49px 0px;}
 }
-@media(max-width: 767px){.box9__footer-row2{margin-bottom: 49px;}}
 
-@media(max-width: 400px){
+@media(max-width: 992px){.box9__footer-row2{margin: 21px 0px 31px 0px;}}
+
+@media(max-width: 767px){
+    .box9__footer-row{
+        .footer-row__newsletter{
+            .newsletter__text, .newsletter__email{width: 390px;}
+        }
+    }
+    .box9__footer-row2{margin: 22px 0px 31px 0px;}
+}
+@media(max-width: 600px){
+    .box9__footer-row{
+        .footer-row__pages, .footer-row__gear-categories, .footer-row__company{
+            align-items: center;
+            flex: 0 1 100%;
+        }
+        .footer-row__newsletter{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .newsletter__text, .newsletter__email{width: 71.03825137%;}
+        }
+    }
     .box9__footer-row2{
+        margin: 24px 0px 31px 0px;
         flex-wrap: wrap;
-        .footer-row2__text{
+        .footer-row2__copyright{
             order: 2;
             text-align: center;
             margin-right: 0px;
-            margin-top: 32px;
+            margin: 0px auto;
+            margin-top: 30px;
         }
         .footer-row2__footer-social-networks{
             order: 1;
             margin: 0px auto;
-            flex: 0 0 75%;
+            flex: 0 0 71.03825137%;
+        }
+    }
+}
+@media(max-width: 493px){
+    .box9__footer-row{
+        .footer-row__newsletter{
+            .newsletter__text, .newsletter__email{width: 100%;}
         }
     }
 }
 
-@media(max-width:352px){
-    .box9__footer-row{
-        align-items: center;
-        .footer-row__pages, .footer-row__gear-categories, .footer-row__company{
-            text-align: center;
-            flex: 0 1 100%;
-        }
-        .footer-row__newsletter{
-            margin: 24px 8px 8px 8px;
-        }
-    }
+@media(max-width: 380px){
     .box9__footer-row2{
-        margin: 32px 8px 49px 8px;
+        .footer-row2__footer-social-networks{flex: 0 0 100%;}
     }
 }
-@media(max-width:310px){
-    .box9__footer-row{
-        .footer-row__newsletter{
-            margin: 24px -8px 8px -8px;
-            text-align: center;
-            .newsletter__title, .newsletter__text{padding: 0px 16px;}
-            .newsletter__email{
-                border-radius: 0px;
-            }
-        }
-    }
+
+::-webkit-input-placeholder{
+    font-size: 14px;
+    line-height: 150%; 
+    color: rgba(87, 84, 69, 1);
+}
+  
+::-moz-placeholder{  
+    font-size: 14px;
+    line-height: 150%; 
+    color: rgba(87, 84, 69, 1);
+}
+  
+:-ms-input-placeholder{
+    font-size: 14px;
+    line-height: 150%; 
+    color: rgba(87, 84, 69, 1);
+}
+  
+:-moz-placeholder{
+    font-size: 14px;
+    line-height: 150%; 
+    color: rgba(87, 84, 69, 1);
 }

@@ -36,6 +36,12 @@ input, button, textarea {
   font-family: inherit;
 }
 
+input, input:focus {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 input::-ms-clear {
   display: none;
 }
@@ -72,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 select {
   font: inherit;
+  color: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
   -moz-appearance: none;
@@ -81,28 +88,4 @@ select {
 
 select::-ms-expand {
   display: none;
-}
-
-::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgb(87, 84, 69);
-}
-
-::-moz-placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgb(87, 84, 69);
-}
-
-:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgb(87, 84, 69);
-}
-
-:-moz-placeholder {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgb(87, 84, 69);
 }/*# sourceMappingURL=Outdoor nulling styles.css.map */
