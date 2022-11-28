@@ -428,11 +428,11 @@ select::-ms-expand {
   width: 128px;
   position: relative;
   -webkit-animation: flip 2s ease infinite alternate 0s;
-          animation: flip 2s ease infinite alternate 0s;
+  animation: flip 2s ease infinite alternate 0s;
 }
 .part1__flip:hover {
   -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes flip {
@@ -443,7 +443,6 @@ select::-ms-expand {
     transform: rotateY(0deg);
   }
 }
-
 @keyframes flip {
   0% {
     transform: rotateY(180deg);
@@ -454,7 +453,7 @@ select::-ms-expand {
 }
 .flip__logo1 {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateX(0deg);
   width: 150px;
   display: flex;
@@ -478,7 +477,7 @@ select::-ms-expand {
 
 .flip__logo2 {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
   top: 0px;
@@ -596,7 +595,7 @@ nav .nav__links:hover {
   text-transform: uppercase;
   color: rgba(230, 185, 57, 0);
   -webkit-animation: exploration-kf 2s ease-out 0.5s forwards;
-          animation: exploration-kf 2s ease-out 0.5s forwards;
+  animation: exploration-kf 2s ease-out 0.5s forwards;
 }
 
 @-webkit-keyframes exploration-kf {
@@ -607,7 +606,6 @@ nav .nav__links:hover {
     color: rgb(230, 185, 57);
   }
 }
-
 @keyframes exploration-kf {
   0% {
     color: rgba(230, 185, 57, 0);
@@ -625,7 +623,7 @@ h1 {
   color: rgba(255, 255, 255, 0);
   max-width: 457.6px;
   -webkit-animation: h1-kf 2s linear 1.5s forwards;
-          animation: h1-kf 2s linear 1.5s forwards;
+  animation: h1-kf 2s linear 1.5s forwards;
 }
 
 @-webkit-keyframes h1-kf {
@@ -636,7 +634,6 @@ h1 {
     color: rgb(255, 255, 255);
   }
 }
-
 @keyframes h1-kf {
   0% {
     color: rgba(255, 255, 255, 0);
@@ -652,7 +649,7 @@ h1 {
   color: rgba(202, 204, 209, 0);
   max-width: 544.5px;
   -webkit-animation: lorem1-kf 2s linear 2.5s forwards;
-          animation: lorem1-kf 2s linear 2.5s forwards;
+  animation: lorem1-kf 2s linear 2.5s forwards;
 }
 
 @-webkit-keyframes lorem1-kf {
@@ -663,7 +660,6 @@ h1 {
     color: rgb(202, 204, 209);
   }
 }
-
 @keyframes lorem1-kf {
   0% {
     color: rgba(202, 204, 209, 0);
@@ -880,9 +876,9 @@ h1 {
   }
   .box2-row .box2-row__img .img__pic1 {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: 0% 40%;
-       object-position: 0% 40%;
+    object-position: 0% 40%;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -1681,9 +1677,9 @@ h1 {
     top: 0px;
     left: 0px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: 0% 45%;
-       object-position: 0% 45%;
+    object-position: 0% 45%;
     width: 100%;
     height: 100%;
   }
