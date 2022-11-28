@@ -332,6 +332,7 @@
 .header-row__part1{flex: 1 1 128px;}
 
 .part1__flip{
+    will-change: transform;
     transform-style: preserve-3d;
     width: 128px;
     position: relative;
@@ -341,16 +342,17 @@
 
 @keyframes flip{
     0%{
-        will-change: transform;
+        -webkit-transform: translate3d(0px, 0px, 0px);
         transform: rotateY(180deg);
     }
     100%{
-        will-change: transform;
+        -webkit-transform: translate3d(0px, 0px, 0px);
         transform: rotateY(0deg);
     }
 }
 
 .flip__logo1{
+    will-change: transform;
     backface-visibility: hidden;
     -webkit-transform: translate3d(0px, 0px, 0px);
     transform: rotateX(0deg);
@@ -375,6 +377,7 @@
 }
 
 .flip__logo2{
+    will-change: transform;
     backface-visibility: hidden;
     -webkit-transform: translate3d(0px, 0px, 0px);
     transform: rotateY(180deg);
