@@ -340,12 +340,19 @@
 }
 
 @keyframes flip{
-    0%{transform: rotateY(180deg);}
-    100%{transform: rotateY(0deg);}
+    0%{
+        will-change: transform;
+        transform: rotateY(180deg);
+    }
+    100%{
+        will-change: transform;
+        transform: rotateY(0deg);
+    }
 }
 
 .flip__logo1{
     backface-visibility: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
     transform: rotateX(0deg);
     width: 150px;
     display: flex;
@@ -369,6 +376,7 @@
 
 .flip__logo2{
     backface-visibility: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
     transform: rotateY(180deg);
     position: absolute;
     top: 0px;

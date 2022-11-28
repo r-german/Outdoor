@@ -437,18 +437,22 @@ select::-ms-expand {
 
 @-webkit-keyframes flip {
   0% {
+    will-change: transform;
     transform: rotateY(180deg);
   }
   100% {
+    will-change: transform;
     transform: rotateY(0deg);
   }
 }
 
 @keyframes flip {
   0% {
+    will-change: transform;
     transform: rotateY(180deg);
   }
   100% {
+    will-change: transform;
     transform: rotateY(0deg);
   }
 }
