@@ -428,11 +428,11 @@ select::-ms-expand {
   width: 128px;
   position: relative;
   -webkit-animation: flip 2s ease infinite alternate 0s;
-          animation: flip 2s ease infinite alternate 0s;
+  animation: flip 2s ease infinite alternate 0s;
 }
 .part1__flip:hover {
   -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @-webkit-keyframes flip {
@@ -443,7 +443,6 @@ select::-ms-expand {
     transform: rotateY(0deg);
   }
 }
-
 @keyframes flip {
   0% {
     transform: rotateY(180deg);
@@ -454,7 +453,7 @@ select::-ms-expand {
 }
 .flip__logo1 {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateX(0deg);
   width: 128px;
   display: flex;
@@ -478,7 +477,7 @@ select::-ms-expand {
 
 .flip__logo2 {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
   top: 0px;
@@ -1046,6 +1045,9 @@ h1 {
 }
 .store__climbing-gear .climbing-gear__link3 .link3__text {
   width: 163px;
+}
+.store__climbing-gear .climbing-gear__link3 .link3__text:hover {
+  color: rgb(230, 185, 57);
 }
 
 .store__headwear {
