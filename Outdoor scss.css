@@ -420,7 +420,6 @@ select::-ms-expand {
 }
 
 .header-row__part1 {
-  will-change: transform;
   flex: 1 1 128px;
 }
 
@@ -438,29 +437,24 @@ select::-ms-expand {
 
 @-webkit-keyframes flip {
   0% {
-    transform: translate(0px, 0px);
     transform: rotateY(180deg);
   }
   100% {
-    transform: translate(0px, 0px);
     transform: rotateY(0deg);
   }
 }
 
 @keyframes flip {
   0% {
-    transform: translate(0px, 0px);
     transform: rotateY(180deg);
   }
   100% {
-    transform: translate(0px, 0px);
     transform: rotateY(0deg);
   }
 }
 .flip__logo1 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transform: translate(0px, 0px);
   transform: rotateX(0deg);
   width: 150px;
   display: flex;
@@ -485,7 +479,6 @@ select::-ms-expand {
 .flip__logo2 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transform: translate(0px, 0px);
   transform: rotateY(180deg);
   position: absolute;
   top: 0px;
