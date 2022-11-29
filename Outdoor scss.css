@@ -424,12 +424,14 @@ select::-ms-expand {
 }
 
 .part1__flip {
+  will-change: animation;
+  -webkit-will-change: animation;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   width: 128px;
   position: relative;
-  animation: flip 2s ease infinite alternate 0s;
-  -webkit-animation: flip 2s ease infinite alternate 0s;
+  animation: flip 2s ease infinite alternate 3s;
+  -webkit-animation: flip 2s ease infinite alternate 3s;
 }
 .part1__flip:hover {
   animation-play-state: paused;
@@ -438,23 +440,31 @@ select::-ms-expand {
 
 @keyframes flip {
   0% {
+    will-change: transform;
+    -webkit-will-change: transform;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
   }
   100% {
+    will-change: transform;
+    -webkit-will-change: transform;
     transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
   }
 }
 @-webkit-keyframes flip {
   0% {
+    -webkit-will-change: transform;
     -webkit-transform: rotateY(180deg);
   }
   100% {
+    -webkit-will-change: transform;
     -webkit-transform: rotateY(0deg);
   }
 }
 .flip__logo1 {
+  will-change: transform;
+  -webkit-will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: rotateX(0deg);
@@ -480,6 +490,8 @@ select::-ms-expand {
 }
 
 .flip__logo2 {
+  will-change: transform;
+  -webkit-will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
