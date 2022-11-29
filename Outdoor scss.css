@@ -420,12 +420,13 @@ select::-ms-expand {
 }
 
 .header-row__part1 {
-  flex: 1 1 150px;
+  flex: 1 1 130px;
 }
 
 .part1__flip {
+  perspective: 1000;
   transform-style: preserve-3d;
-  width: 150px;
+  width: 130px;
   position: relative;
   -webkit-animation: flip 2s ease infinite alternate 0s;
           animation: flip 2s ease infinite alternate 0s;
@@ -453,10 +454,15 @@ select::-ms-expand {
   }
 }
 .flip__logo1 {
+  z-index: 2;
+  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateX(0deg);
-  width: 150px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 130px;
   display: flex;
   align-items: center;
 }
@@ -477,13 +483,14 @@ select::-ms-expand {
 }
 
 .flip__logo2 {
+  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 150px;
+  width: 130px;
   display: flex;
   align-items: center;
 }
