@@ -427,8 +427,8 @@ select::-ms-expand {
   transform-style: preserve-3d;
   width: 128px;
   position: relative;
-  -webkit-animation: flip 2s ease infinite alternate 5s;
-          animation: flip 2s ease infinite alternate 5s;
+  -webkit-animation: flip 2s ease infinite alternate 0s;
+          animation: flip 2s ease infinite alternate 0s;
 }
 .part1__flip:hover {
   -webkit-animation-play-state: paused;
@@ -456,7 +456,7 @@ select::-ms-expand {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transform: rotateY(0deg);
-  width: 150px;
+  width: 128px;
   display: flex;
   align-items: center;
 }
@@ -483,7 +483,7 @@ select::-ms-expand {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 150px;
+  width: 128px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
