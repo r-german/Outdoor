@@ -437,24 +437,29 @@ select::-ms-expand {
 
 @-webkit-keyframes flip {
   0% {
+    transform: translateZ(0);
     transform: rotateY(180deg);
   }
   100% {
+    transform: translateZ(0);
     transform: rotateY(0deg);
   }
 }
 
 @keyframes flip {
   0% {
+    transform: translateZ(0);
     transform: rotateY(180deg);
   }
   100% {
+    transform: translateZ(0);
     transform: rotateY(0deg);
   }
 }
 .flip__logo1 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  transform: translateZ(0);
   transform: rotateX(0deg);
   width: 150px;
   display: flex;
@@ -479,6 +484,7 @@ select::-ms-expand {
 .flip__logo2 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  transform: translateZ(0);
   transform: rotateY(180deg);
   position: absolute;
   top: 0px;
