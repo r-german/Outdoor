@@ -332,11 +332,15 @@
 .header-row__part1{flex: 1 1 133px;}
 .test{
     will-change: transform;
+    -webkit-will-change: transform;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
     width: 133px;
     height: 39px;
 }
 .part1__flip{
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
     transform-style: preserve-3d;
     width: 133px;
     position: relative;
@@ -345,13 +349,29 @@
 }
 
 @keyframes flip{
-    0%{transform: translate3d(0, 0, 0) rotateY(180deg);}
-    100%{transform: translate3d(0, 0, 0) rotateY(0deg);}
+    0%{
+        transform: translate3d(0, 0, 0) rotateY(180deg);
+        -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
+    }
+    100%{
+        transform: translate3d(0, 0, 0) rotateY(0deg);
+        -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
+}
+
+@-webkit-keyframes flip{
+    0%{
+        -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
+    }
+    100%{
+        -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
+    }
 }
 
 .flip__logo1{
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0) rotateX(0deg);
+    -webkit-transform: translate3d(0, 0, 0) rotateX(0deg);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -378,6 +398,7 @@
 .flip__logo2{
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0) rotateY(180deg);
+    -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
     position: absolute;
     top: 0px;
     left: 0px;
