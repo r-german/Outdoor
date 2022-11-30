@@ -331,19 +331,18 @@
 
 .header-row__part1{flex: 1 1 133px;}
 .test{
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     will-change: transform;
     -webkit-will-change: transform;
-    transform: translate3d(1px, 1px, 1px);
-    -webkit-transform: translate3d(1px, 1px, 1px);
     width: 133px;
     height: 39px;
 }
 .part1__flip{
-    will-change: transform;
-    -webkit-will-change: transform;
-    transform: translate3d(1px, 1px, 1px);
-    -webkit-transform: translate3d(1px, 1px, 1px);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     width: 133px;
     position: relative;
     animation-name: flip;
@@ -356,37 +355,37 @@
     -webkit-animation-iteration-count: infinite; 
     animation-direction: alternate;
     -webkit-animation-direction: alternate;
-    animation-delay: 5s;
-    -webkit-animation-delay: 5s;
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes flip{
     0%{
-        transform: translate3d(1px, 1px, 1px) rotateY(180deg);
-        -webkit-transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+        transform: translateZ(0) rotate3d(0, 1, 0, 180deg);
+        -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 180deg);
     }
     100%{
-        transform: translate3d(1px, 1px, 1px) rotateY(0deg);
-        -webkit-transform: translate3d(1px, 1px, 1px) rotateY(0deg);
+        transform: translateZ(0) rotate3d(0, 1, 0, 0deg);
+        -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 0deg);
     }
 }
 
 @-webkit-keyframes flip{
     0%{
-        -webkit-transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+        -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 180deg);
     }
     100%{
-        -webkit-transform: translate3d(1px, 1px, 1px) rotateY(0deg);
+        -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 0deg);
     }
 }
 
 .flip__logo1{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: translate3d(1px, 1px, 1px) rotateX(0deg);
-    -webkit-transform: translate3d(1px, 1px, 1px) rotateX(0deg);
+    transform: translateZ(0) rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 0deg);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -413,8 +412,8 @@
 .flip__logo2{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: translate3d(1px, 1px, 1px) rotateY(180deg);
-    -webkit-transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+    transform: translateZ(0) rotate3d(0, 1, 0, 180deg);
+    -webkit-transform: translateZ(0) rotate3d(0, 1, 0, 180deg);
     position: absolute;
     top: 0px;
     left: 0px;
