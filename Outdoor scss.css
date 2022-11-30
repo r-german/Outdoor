@@ -423,11 +423,16 @@ select::-ms-expand {
   flex: 1 1 133px;
 }
 
-.part1__flip {
-  transform: translate3d(1px, 1px, 1px);
-  transform-style: preserve-3d;
+.test {
+  will-change: transform;
   width: 133px;
   height: 39px;
+}
+
+.part1__flip {
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  width: 133px;
   position: relative;
   -webkit-animation: flip 2s ease infinite alternate 0s;
           animation: flip 2s ease infinite alternate 0s;
@@ -439,25 +444,25 @@ select::-ms-expand {
 
 @-webkit-keyframes flip {
   0% {
-    transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+    transform: translate3d(0, 0, 0) rotateY(180deg);
   }
   100% {
-    transform: translate3d(1px, 1px, 1px) rotateY(0deg);
+    transform: translate3d(0, 0, 0) rotateY(0deg);
   }
 }
 
 @keyframes flip {
   0% {
-    transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+    transform: translate3d(0, 0, 0) rotateY(180deg);
   }
   100% {
-    transform: translate3d(1px, 1px, 1px) rotateY(0deg);
+    transform: translate3d(0, 0, 0) rotateY(0deg);
   }
 }
 .flip__logo1 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transform: translate3d(1px, 1px, 1px) rotateX(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -484,7 +489,7 @@ select::-ms-expand {
 .flip__logo2 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transform: translate3d(1px, 1px, 1px) rotateY(180deg);
+  transform: translate3d(0, 0, 0) rotateY(180deg);
   position: absolute;
   top: 0px;
   left: 0px;
