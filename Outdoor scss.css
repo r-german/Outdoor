@@ -650,6 +650,7 @@ nav .nav__links:hover {
 .buttons__button2 .button2__cart .cart__circle .circle__number {
   font-size: 11px;
   line-height: 18px;
+  color: rgb(87, 84, 69);
 }
 
 @media (max-width: 1060px) {
