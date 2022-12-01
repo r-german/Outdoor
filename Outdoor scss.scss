@@ -335,21 +335,12 @@
     transform-style: preserve-3d;
     width: 133px;
     position: relative;
-    animation: flip 2s linear infinite alternate 0s;
+    animation: flip 2s ease infinite alternate 0s;
     &:hover{animation-play-state: paused;}
 }
 
 @keyframes flip{
     0%{transform: rotateY(180deg);}
-    10%{transform: rotateY(162deg);}
-    20%{transform: rotateY(144deg);}
-    30%{transform: rotateY(126deg);}
-    40%{transform: rotateY(108deg);}
-    50%{transform: rotateY(90deg);}
-    60%{transform: rotateY(72deg);}
-    70%{transform: rotateY(54deg);}
-    80%{transform: rotateY(36deg);}
-    90%{transform: rotateY(18deg);}
     100%{transform: rotateY(0deg);}
 }
 
