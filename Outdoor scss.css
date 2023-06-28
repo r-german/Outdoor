@@ -58,8 +58,8 @@ a {
   overflow: hidden;
 }
 
-.wrapper._lock {
-  height: 100%;
+.body._lock {
+  height: 100vh;
 }
 
 .content {
