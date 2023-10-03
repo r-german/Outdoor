@@ -115,13 +115,14 @@ animItems2.forEach(animItem2 => {
 });
 
 // параллакс-эффект при скролле
+let chromeAgent = navigator.userAgent.indexOf("Chrome") > -1;
+let safariAgent = navigator.userAgent.indexOf("Safari") > -1;
 function checkBrowser() {
-    let chromeAgent = navigator.userAgent.indexOf("Chrome") > -1;
-    let safariAgent = navigator.userAgent.indexOf("Safari") > -1;
     if ((chromeAgent) && (safariAgent)) {
         safariAgent = false;
     }
 }
+checkBrowser();
 jarallax(document.querySelector('.jarallax'), {
     imgPosition: '',
     disableParallax: /safariAgent|Edg|Firefox/
