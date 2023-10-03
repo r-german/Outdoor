@@ -122,7 +122,6 @@ function checkBrowser() {
         safariAgent = false;
     }
 }
-checkBrowser();
 jarallax(document.querySelector('.jarallax'), {
     imgPosition: '',
     disableParallax: /safariAgent|Edg|Firefox/
